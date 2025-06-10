@@ -11,9 +11,9 @@ namespace py = pybind11;
 
 class OwnConvexHullTSP {
 private:
-    std::vector<std::vector<double>> g;
-    std::vector<int> t;
-    double c;
+    std::vector<std::vector<double>> graph;
+    std::vector<int> tour;
+    double cost;
     size_t n;
 
     // Calculate cross product of vectors (p2-p1) and (p3-p1)
@@ -25,21 +25,16 @@ private:
     }
 
     // Find the convex hull using Graham scan
-    std::vector<int> hull(const std::vector<std::vector<double>>& pts) {
-        if (pts.size() < 3) {
+    std::vector<int> find_convex_hull(const std::vector<std::vector<double>>& points) {
+        if (points.size() < 3) {
             std::vector<int> res;
-            for (size_t i = 0; i < pts.size(); ++i) {
+            for (size_t i = 0; i < points.size(); ++i) {
                 res.push_back(static_cast<int>(i));
             }
             return res;
         }
 
         // Find point with lowest y-coordinate (and leftmost if tied)
-        size_t low = 0;
-        for (size_t i = 1; i < pts.size(); ++i) {
-            if (pts[i][1] < pts[low][1] || 
-                (pts[i][1] == pts[low][1] && pts[i][0] < pts[low][0])) {
-                low = i;
         size_t lowest = 0;
         for (size_t i = 1; i < points.size(); ++i) {
             if (points[i][1] < points[lowest][1] || 
@@ -81,9 +76,9 @@ private:
 
         for (size_t i = 2; i < indices.size(); ++i) {
             while (hull.size() >= 2 && 
-                   cross_product(points[hull[hull.size()-2]], 
-                               points[hull[hull.size()-1]], 
-                               points[indices[i]]) <= 0) {
+                   cross(points[hull[hull.size()-2]], 
+                        points[hull[hull.size()-1]], 
+                        points[indices[i]]) <= 0) {
                 hull.pop_back();
             }
             hull.push_back(static_cast<int>(indices[i]));

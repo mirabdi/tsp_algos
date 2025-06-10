@@ -2,8 +2,8 @@
   "algorithm": "ConvexHull",
   "dataset": "xql662",
   "dimension": 662,
-  "runtime": 0.1565265655517578,
-  "memory_usage": 847872,
+  "runtime": 0.15306973457336426,
+  "memory_usage": 548864,
   "tour_cost": 4237.543976604582,
   "tour": [
     1,

@@ -2,8 +2,8 @@
   "algorithm": "ConvexHull",
   "dataset": "a280",
   "dimension": 280,
-  "runtime": 0.029775142669677734,
-  "memory_usage": 217088,
+  "runtime": 0.029412269592285156,
+  "memory_usage": 274432,
   "tour_cost": 4342.995237302692,
   "tour": [
     1,

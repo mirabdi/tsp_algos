@@ -2,8 +2,8 @@
   "algorithm": "Greedy",
   "dataset": "a280",
   "dimension": 280,
-  "runtime": 0.026566028594970703,
-  "memory_usage": 2310144,
+  "runtime": 0.030315160751342773,
+  "memory_usage": 1998848,
   "tour_cost": 3148.109934934404,
   "tour": [
     0,

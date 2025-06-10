@@ -2,8 +2,8 @@
   "algorithm": "MSTApproximation",
   "dataset": "xql662",
   "dimension": 662,
-  "runtime": 0.1573629379272461,
-  "memory_usage": 1753088,
+  "runtime": 0.15040850639343262,
+  "memory_usage": 1589248,
   "tour_cost": 3526.5415918369845,
   "tour": [
     0,

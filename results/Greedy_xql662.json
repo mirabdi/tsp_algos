@@ -2,8 +2,8 @@
   "algorithm": "Greedy",
   "dataset": "xql662",
   "dimension": 662,
-  "runtime": 0.14904022216796875,
-  "memory_usage": 1888256,
+  "runtime": 0.14377379417419434,
+  "memory_usage": 2203648,
   "tour_cost": 3244.8069297875477,
   "tour": [
     0,

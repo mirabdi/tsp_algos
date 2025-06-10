@@ -2,8 +2,8 @@
   "algorithm": "MSTApproximation",
   "dataset": "a280",
   "dimension": 280,
-  "runtime": 0.03133869171142578,
-  "memory_usage": -53248,
+  "runtime": 0.025828838348388672,
+  "memory_usage": -135168,
   "tour_cost": 3484.853377045222,
   "tour": [
     0,
